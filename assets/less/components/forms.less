@@ -1,0 +1,45 @@
+.Form-field {
+
+}
+
+.Form-input {
+  display: block;
+  border: @blu-border;
+  border-radius: @blu-border-radius;
+  padding: @blu-padding-default;
+  width: 100%;
+
+  -webkit-appearance: none;
+
+  &:focus {
+    border: 1px solid blue;
+    transition: all .2s ease-in;
+  }
+
+  &:disabled {
+    /* background-color: lighten(@gray-lighter, 80%); */
+    cursor: not-allowed;
+  }
+
+  &:required:focus {
+    /* border: 1px solid @orange-light; */
+  }
+
+  &.input-invalid
+    /* border: 1px solid @red-light; */
+    /* color: lighten(@red, 50%); */
+
+    &:focus {
+      /* border: 1px solid @red; */
+    }
+  }
+
+  &.input-valid
+    /* border: 1px solid @green-light; */
+    /* color: lighten(@green, 40%); */
+
+    &:focus {
+      /* border: 1px solid @green; */
+    }
+  }
+}
