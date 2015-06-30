@@ -17,7 +17,7 @@ gulp.task 'less', ->
     .pipe less().on 'error', (err) ->
       console.error err
       this.emit 'end'
-    .pipe concat('styles.css')
+    .pipe concat('site.css')
     .pipe gulp.dest('./site/assets/styles')
 
 gulp.task 'watch', ->

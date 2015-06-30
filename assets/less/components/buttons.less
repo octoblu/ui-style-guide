@@ -1,0 +1,30 @@
+.Button {
+  border: 1px solid transparent;
+  padding: @blu-padding-default;
+
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+.Button--primary {
+  &:extend(.Button);
+
+  border-radius: @blu-border-radius;
+  border-color: @blu-blue;
+
+  background: @blu-blue;
+  color: white;
+  text-align: center;
+}
+
+.Button--secondary {
+  &:extend(.Button);
+  color: @blu-blue;
+}
+
+.Button--full {
+  &:extend(.Button--primary);
+
+  .flex;
+  .justify-content(center);
+}

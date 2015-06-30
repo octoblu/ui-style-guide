@@ -3,13 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Gimme your creds!</title>
-    <link rel="stylesheet" href="/assets/styles/manifest.css">
+    <link rel="stylesheet" href="/assets/styles/site.css">
   </head>
   <body>
-    <form method="POST" action="/api/callback">
-      <input name="deviceId">
-      <input name="token">
-      <input type="submit">
+    <form method="POST" action="/api/callback" class="Form">
+      <fieldse class="Form-fieldset">
+        <legend class="Form-legend">Authenticate Little Bits</legend>
+        <div class="Form-field">
+          <label for="deviceId" class="Form-label">Device ID</label>
+          <input name="deviceId" class="Form-input">
+        </div>
+
+        <div class="Form-field">
+          <label for="token" class="Form-label">Token</label>
+          <input name="token" class="Form-input">
+        </div>
+
+        <div class="Form-field--actions">
+          <input type="submit" class="Button Button--full">
+        </div>
+      </fieldse>
     </form>
   </body>
 </html>
