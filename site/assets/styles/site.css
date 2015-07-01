@@ -386,24 +386,89 @@ iframe,
 video {
   max-width: 100%;
 }
-.Button,
-.Button--primary,
-.Button--secondary,
-.Button--full {
-  border: 1px solid transparent;
-  padding: 10px;
-  background: transparent;
-  -webkit-appearance: none;
+.blu-container {
+  width: 800px;
+  margin: 0 auto;
 }
-.Button--primary,
-.Button--full {
+section {
+  border-bottom: 1px solid #D0D0D0;
+  padding: 30px 0;
+}
+.swatches {
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  min-width: 0;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.swatch {
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  min-height: 0;
+  -webkit-flex-direction: column-reverse;
+  -moz-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  height: 150px;
+  width: 150px;
   border-radius: 2px;
-  border-color: #14568f;
+  border: 1px solid #c9c9c9;
+}
+.swatch--red {
+  background: #cf5c60;
+}
+.swatch--pink {
+  background: #d96383;
+}
+.swatch-label {
+  padding: 10px;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+}
+.Button {
+  border: 2px solid #14568f;
+  border-radius: 2px;
+  padding: 10px;
   background: #14568f;
   color: white;
-  text-align: center;
+  -webkit-appearance: none;
 }
 .Button--secondary {
+  border-color: #14568f;
+  background: transparent;
+  color: #14568f;
+}
+.Button--secondary:hover {
+  background: #0e3b62;
+  border-color: #0e3b62;
+}
+.Button--no-style {
+  background: transparent;
+  border-color: transparent;
   color: #14568f;
 }
 .Button--full {
@@ -424,6 +489,10 @@ video {
   -ms-justify-content: center;
   justify-content: center;
 }
+.Button--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 .Form {
   display: -moz-box;
   display: -webkit-box;
@@ -443,11 +512,13 @@ video {
   color: #3c3d3e;
 }
 .Form-fieldset {
-  border: 1px solid #333333;
+  border: 1px solid #c9c9c9;
   padding: 30px;
 }
 .Form-legend {
-  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
   font-weight: 800;
 }
 .Form-field,

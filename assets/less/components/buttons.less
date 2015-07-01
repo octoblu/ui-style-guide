@@ -1,30 +1,36 @@
 .Button {
-  border: 1px solid transparent;
-  padding: @blu-padding-default;
-
-  background: transparent;
-  -webkit-appearance: none;
-}
-
-.Button--primary {
-  &:extend(.Button);
-
+  border: 2px solid @blu-blue;
   border-radius: @blu-border-radius;
-  border-color: @blu-blue;
+  padding: @blu-padding-default;
 
   background: @blu-blue;
   color: white;
-  text-align: center;
+  -webkit-appearance: none;
 }
 
 .Button--secondary {
-  &:extend(.Button);
+  border-color: @blu-blue;
+  background: transparent;
+  color: @blu-blue;
+
+  &:hover {
+    background: darken(@blu-blue, 10%);
+    border-color: darken(@blu-blue, 10%);
+  }
+}
+
+.Button--no-style {
+  background: transparent;
+  border-color: transparent;
   color: @blu-blue;
 }
 
 .Button--full {
-  &:extend(.Button--primary);
-
   .flex;
   .justify-content(center);
+}
+
+.Button--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
